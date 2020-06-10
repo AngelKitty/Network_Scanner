@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Scanner - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP6751.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Scanner.pdb" /debug /machine:I386 /out:"Debug/Scanner.exe" /pdbtype:sept 
+".\Debug\AllScan.obj"
+".\Debug\CmdDlg.obj"
+".\Debug\DosScan.obj"
+".\Debug\HostScan.obj"
+".\Debug\NetBIOSScan.obj"
+".\Debug\PortScan.obj"
+".\Debug\Scanner.obj"
+".\Debug\ScannerDlg.obj"
+".\Debug\SnifferScan.obj"
+".\Debug\SNMPScan.obj"
+".\Debug\SQLScan.obj"
+".\Debug\SSSelectIP.obj"
+".\Debug\StdAfx.obj"
+".\Debug\WeakKeyScan.obj"
+".\Debug\Scanner.res"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP6751.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+Scanner.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

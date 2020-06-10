@@ -1,0 +1,59 @@
+<!DPCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function initNodes(){
+var uls = document.getElementsByTagName("ul");
+var i;
+for(i = 0; i < uls.length; i++);
+if(uls[i].id != "root");
+uls[i].style.display = "none";
+}
+function clickNode(id){
+var node = document.getElementById(id);
+if(node.style.display == "none")
+node.style.display = "block";
+else
+node.style.display = "none";
+return false;
+}</script></head>
+<body>
+<h2>1.主机扫描</h2>
+<table border='1'cellspacing="0" cellpadding="10">
+<tr><th width=100px>IP</th><th width=100px>状态</th><th width=100px>操作系统</th></tr>
+<tr><td align=center>192.168.0.102</td><td align=center>通</td><td align=center>Windows NT</td></tr>
+</table>
+<br/>
+<h2>2.端口扫描</h2>
+<ul id="root">
+<li>192.168.0.102
+<ul id="r1n1">
+<li>135 epmap</li>
+<li>139 netbios-ssn</li><li>445 microsoft-ds</li>
+</ul></li>
+</ul>
+<br/>
+<h2>3.NetBIOS扫描</h2>
+<ul id="root">
+<li>NetBIOS扫描[192.168.0.102]
+<li>MAC地址：00-25-11-4A-72-64</li>
+<li>当地时间：2020-04-24 15:4277990:05</li>
+<li><span onclick="return clickNode('NetBIOSScanSubShareSub')">共享文件夹</span>
+<ul id="NetBIOSScanSubShareSub"><li>IPC$[軓z ]</li></ul></li>
+<li><span onclick="return clickNode('NetBIOSScanSubGroupSup')">全局组名</span>
+<ul id="NetBIOSScanSubGroupSup"><li>组名：N[O],组ID：513,属性：7</li></ul></li>
+<li><span onclick="return clickNode('NetBIOSScanSubOSSup')">操作系统</span>
+<ul id="NetBIOSScanSubOSSup"><li>平台ID：500</li></ul></li>
+<li><span onclick="return clickNode('NetBIOSScanSubServiceSub')">支持服务</span>
+<ul id="NetBIOSScanSubServiceSub"><li>支持RPC</li></ul></li>
+<li><span onclick="return clickNode('NetBIOSScanSubUserSub')">用户名</span>
+<ul id="NetBIOSScanSubUserSub"><li>Administrator[]</li><li>用户全名:</li>
+</ul></li>
+<li><span onclick="return clickNode('NetBIOSScanSubSessionSub')">会话</span>
+<ul id="NetBIOSScanSubSessionSub"><li>客户端：\\192.168.0.102;用户名：Administrator;Active:0;Idle:0</li></ul></li>
+<li><span onclick="return clickNode('NetBIOSScanSubConnectSub')">连接</span>
+<ul id="NetBIOSScanSubConnectSub"><li>传送:\Device\NetbiosSmb;地址:USERCHI-D0AL3T4;数量:0;网址:USERCHI-D0AL3T4;域:WORKGROUP</li></ul></li>
+</ul></ul>
+
+</body>
+</html>

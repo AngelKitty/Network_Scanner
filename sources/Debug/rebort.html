@@ -1,0 +1,32 @@
+<!DPCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function initNodes(){
+var uls = document.getElementsByTagName("ul");
+var i;
+for(i = 0; i < uls.length; i++);
+if(uls[i].id != "root");
+uls[i].style.display = "none";
+}
+function clickNode(id){
+var node = document.getElementById(id);
+if(node.style.display == "none")
+node.style.display = "block";
+else
+node.style.display = "none";
+return false;
+}</script></head>
+<body>
+<h2>1.主机扫描</h2>
+<table border='1'cellspacing="0" cellpadding="10">
+<tr><th width=100px>IP</th><th width=100px>状态</th><th width=100px>操作系统</th></tr>
+<tr><td align=center></td><td align=center></td><td align=center></td></tr>
+</table>
+<br/>
+<h2>2.端口扫描</h2>
+<ul id="root">
+<li>
+<p>无开放端口</p>
+</ul></body>
+</html>

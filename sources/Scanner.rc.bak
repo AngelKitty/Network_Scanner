@@ -1,0 +1,460 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Scanner.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Scanner.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Scanner"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Scanner 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 2016 梁森",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_SCANNER_DIALOG DIALOGEX 0, 0, 400, 255
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Scanner"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tab1",IDC_TABMAIN,"SysTabControl32",0x0,7,4,376,242
+END
+
+IDD_DIALOGHOSTSCAN DIALOG DISCARDABLE  0, 0, 300, 200
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    LTEXT           "起始IP",IDC_STATIC,7,10,28,11
+    LTEXT           "结束IP",IDC_STATIC,102,9,33,12
+    PUSHBUTTON      "开始扫描",IDC_BUTTONStartScan,236,9,35,12
+    CONTROL         "List3",IDC_LISTResult,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,7,33,267,146
+    CONTROL         "IPAddress1",IDC_IPADDRESSBegin,"SysIPAddress32",
+                    WS_TABSTOP,35,10,65,13
+    CONTROL         "IPAddress2",IDC_IPADDRESSEnd,"SysIPAddress32",
+                    WS_TABSTOP,132,9,79,13
+END
+
+IDD_DIALOGPORTSCAN DIALOG DISCARDABLE  0, 0, 300, 200
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    LTEXT           "开始IP",IDC_STATIC,7,7,32,12
+    CONTROL         "IPAddress1",IDC_IPADDRESSBgeinIP,"SysIPAddress32",
+                    WS_TABSTOP,46,7,70,13
+    LTEXT           "结束IP",IDC_STATIC,128,7,29,14
+    CONTROL         "IPAddress2",IDC_IPADDRESSEndIP,"SysIPAddress32",
+                    WS_TABSTOP,168,7,67,14
+    LTEXT           "开始端口",IDC_STATIC,7,23,36,12
+    EDITTEXT        IDC_EDITBeginPort,49,25,39,12,ES_AUTOHSCROLL
+    LTEXT           "结束端口",IDC_STATIC,100,27,35,11
+    EDITTEXT        IDC_EDITEndPort,149,26,25,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "开始",IDC_BUTTONStart,255,26,28,12
+    CONTROL         "Tree1",IDC_TREEResult,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,
+                    7,53,268,143
+END
+
+IDD_DIALOGWEAKKEYSCAN DIALOG DISCARDABLE  0, 0, 300, 200
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    LTEXT           "扫描IP",IDC_STATIC,7,13,38,11
+    CONTROL         "IPAddress1",IDC_IPADDRESSIP,"SysIPAddress32",WS_TABSTOP,
+                    54,13,90,13
+    PUSHBUTTON      "开始扫描",IDC_BUTTONStart,194,123,42,13
+    LTEXT           "用户名",IDC_STATIC,7,33,29,10
+    EDITTEXT        IDC_EDITUSERNAME,55,35,87,12,ES_AUTOHSCROLL
+    LTEXT           "前缀",IDC_STATIC,7,57,33,12
+    EDITTEXT        IDC_EDITPrefix,52,56,32,16,ES_AUTOHSCROLL
+    LTEXT           "后缀",IDC_STATIC,101,56,29,12
+    EDITTEXT        IDC_EDITPostfix,142,55,32,15,ES_AUTOHSCROLL
+    LTEXT           "长度",IDC_STATIC,156,14,27,13
+    COMBOBOX        IDC_COMBOLENGTH,180,13,54,38,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "A-Z大写字母",IDC_CHECKCAPITAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,7,83,55,10
+    CONTROL         "a-z小写字母",IDC_CHECKLOWER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,72,81,50,14
+    CONTROL         "0-9数字",IDC_CHECKNUMBER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,134,81,44,14
+    CONTROL         "特殊符号",IDC_CHECKSPECIAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,191,80,44,15
+    EDITTEXT        IDC_EDITWEAKKEYRESULT,7,145,275,48,ES_AUTOHSCROLL
+    CONTROL         "自定义",IDC_CHECKSelfDefine,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,103,49,12
+    EDITTEXT        IDC_EDITSelfDefine,57,104,174,13,ES_AUTOHSCROLL
+END
+
+IDD_DIALOGDOSSCAN DIALOG DISCARDABLE  0, 0, 300, 200
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    LTEXT           "目标IP",IDC_STATIC,7,16,28,14
+    CONTROL         "IPAddress1",IDC_IPADDRESSTARGETIP,"SysIPAddress32",
+                    WS_TABSTOP,46,15,60,13
+    LTEXT           "目标端口",IDC_STATIC,115,16,48,14
+    EDITTEXT        IDC_EDITTARGETPORT,177,16,41,15,ES_AUTOHSCROLL
+    LTEXT           "启用线程",IDC_STATIC,7,47,38,13
+    EDITTEXT        IDC_EDITTHREADCOUNT,58,46,39,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "开始扫描",IDC_BUTTONStart,109,44,50,16
+    PUSHBUTTON      "停止扫描",IDC_BUTTONStop,168,43,53,18
+END
+
+IDD_DIALOGSNIFFERSCAN DIALOG DISCARDABLE  0, 0, 300, 200
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    CONTROL         "List2",IDC_LISTReceive,"SysListView32",WS_BORDER | 
+                    WS_TABSTOP,7,7,271,65
+    LISTBOX         IDC_LISTKeyword,113,83,59,59,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "开始监听",IDC_BUTTONStart,104,171,46,13
+    PUSHBUTTON      "停止监听",IDC_BUTTONStop,149,169,43,14
+    EDITTEXT        IDC_EDITComment,7,169,96,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "清空列表",IDC_BUTTONClear,193,168,46,14
+    PUSHBUTTON      "添加关键字",IDC_BUTTONAddKW,187,109,41,13
+    EDITTEXT        IDC_EDITKeyword,184,84,47,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "删除关键字",IDC_BUTTONDeleteKW,184,130,47,13
+    EDITTEXT        IDC_EDITContent,7,83,100,64,ES_AUTOHSCROLL
+END
+
+IDD_DIALOGSSSelectIP DIALOG DISCARDABLE  0, 0, 187, 96
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "对话"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,30,75,50,14
+    PUSHBUTTON      "取消",IDCANCEL,107,75,50,14
+    LISTBOX         IDC_LISTIP,24,14,134,45,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOGSQLSCAN DIALOG DISCARDABLE  0, 0, 300, 200
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    LTEXT           "URL:",IDC_STATIC,13,13,46,14
+    EDITTEXT        IDC_EDITURL,114,13,169,14,ES_AUTOHSCROLL
+    LTEXT           "URL参数：",IDC_STATIC,13,31,39,13
+    EDITTEXT        IDC_EDITURLParam,116,32,167,12,ES_AUTOHSCROLL
+    LTEXT           "注入标志：",IDC_STATIC,14,51,43,12
+    EDITTEXT        IDC_EDITSQLSign,75,50,68,12,ES_AUTOHSCROLL
+    GROUPBOX        "Static",IDC_STATIC,7,68,276,47
+    EDITTEXT        IDC_EDITSendPack,13,78,224,25,ES_AUTOHSCROLL
+    GROUPBOX        "Static",IDC_STATIC,7,122,276,55
+    EDITTEXT        IDC_EDITReveivePack,7,135,276,33,ES_AUTOHSCROLL
+    PUSHBUTTON      "开始测试",IDC_BUTTONStart,179,49,49,14
+    EDITTEXT        IDC_EDITResult,14,179,136,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOGNETBIOSSCAN DIALOG DISCARDABLE  0, 0, 295, 200
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    CONTROL         "IPAddress1",IDC_IPADDRESSIP,"SysIPAddress32",WS_TABSTOP,
+                    66,14,78,13
+    LTEXT           "扫描IP",IDC_STATIC,7,14,51,11
+    PUSHBUTTON      "开始扫描",IDC_BUTTONStart,156,13,51,13
+    CONTROL         "Tree1",IDC_TREEResult,"SysTreeView32",WS_BORDER | 
+                    WS_TABSTOP,7,73,288,119
+END
+
+IDD_DIALOGSNMPSCAN DIALOG DISCARDABLE  0, 0, 300, 200
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    LTEXT           "扫描IP",IDC_STATIC,15,16,37,13
+    CONTROL         "IPAddress1",IDC_IPADDRESSTarget,"SysIPAddress32",
+                    WS_TABSTOP,62,15,75,14
+    PUSHBUTTON      "开始扫描",IDC_BUTTONStart,180,14,45,16
+    CONTROL         "Tree1",IDC_TREEResult,"SysTreeView32",WS_BORDER | 
+                    WS_TABSTOP,7,49,272,143
+END
+
+IDD_DIALOGALLSCAN DIALOG DISCARDABLE  0, 0, 300, 200
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "开始",IDC_BUTTONStart,162,31,50,13
+    EDITTEXT        IDC_EDIT1,44,31,75,12,ES_AUTOHSCROLL
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Scanner Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Scanner\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2016\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Scanner.EXE\0"
+            VALUE "ProductName", "Scanner 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SCANNER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 383
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 246
+    END
+
+    IDD_DIALOGHOSTSCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 1
+    END
+
+    IDD_DIALOGPORTSCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_DIALOGWEAKKEYSCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+    END
+
+    IDD_DIALOGDOSSCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_DIALOGSNIFFERSCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DIALOGSSSelectIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+
+    IDD_DIALOGSQLSCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_DIALOGNETBIOSSCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_DIALOGSNMPSCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_DIALOGALLSCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOGWEAKKEYSCAN DLGINIT
+BEGIN
+    IDC_COMBOLENGTH, 0x403, 2, 0
+0x0030, 
+    IDC_COMBOLENGTH, 0x403, 2, 0
+0x0031, 
+    IDC_COMBOLENGTH, 0x403, 2, 0
+0x0032, 
+    IDC_COMBOLENGTH, 0x403, 2, 0
+0x0033, 
+    IDC_COMBOLENGTH, 0x403, 2, 0
+0x0034, 
+    IDC_COMBOLENGTH, 0x403, 2, 0
+0x0035, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Scanner(&A)..."
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Scanner.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
